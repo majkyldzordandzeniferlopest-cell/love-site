@@ -1,0 +1,1478 @@
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    background: #080708;
+
+    color: #f5eef0;
+
+    font-family:
+        Inter,
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    overflow-x: hidden;
+
+}
+
+
+/* =========================================
+   NOISE
+========================================= */
+
+.noise {
+
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    z-index: 50;
+
+    opacity: 0.035;
+
+    background-image:
+        url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.5'/%3E%3C/svg%3E");
+
+}
+
+
+/* =========================================
+   STARS
+========================================= */
+
+.stars {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: -1;
+
+    pointer-events: none;
+
+    background-image:
+        radial-gradient(#ffffff 1px, transparent 1px),
+        radial-gradient(#ffffff 1px, transparent 1px);
+
+    background-size:
+        120px 120px,
+        180px 180px;
+
+    background-position:
+        0 0,
+        50px 80px;
+
+    opacity: 0.08;
+
+}
+
+
+/* =========================================
+   TOPBAR
+========================================= */
+
+.topbar {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    height: 80px;
+
+    padding: 0 5vw;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    z-index: 100;
+
+}
+
+
+.logo {
+
+    font-size: 18px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+}
+
+
+.logo span {
+
+    color: #d72e51;
+
+    margin: 0 4px;
+
+}
+
+
+.music-control button {
+
+    width: 44px;
+    height: 44px;
+
+    border-radius: 50%;
+
+    border:
+        1px solid rgba(255,255,255,0.15);
+
+    background:
+        rgba(255,255,255,0.04);
+
+    color: white;
+
+    cursor: pointer;
+
+    font-size: 20px;
+
+    transition: 0.3s;
+
+}
+
+
+.music-control button:hover {
+
+    background:
+        rgba(255,255,255,0.1);
+
+    transform: scale(1.08);
+
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+
+    position: relative;
+
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+
+}
+
+
+.hero-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: min(1100px, 90%);
+
+}
+
+
+.eyebrow,
+.label {
+
+    text-transform: uppercase;
+
+    letter-spacing: 4px;
+
+    font-size: 11px;
+
+    color: #a78d94;
+
+}
+
+
+.hero h1 {
+
+    margin-top: 30px;
+
+    max-width: 900px;
+
+    font-size:
+        clamp(55px, 9vw, 130px);
+
+    line-height: 0.95;
+
+    letter-spacing: -6px;
+
+    font-weight: 700;
+
+}
+
+
+.hero h1 span {
+
+    color: #d72e51;
+
+}
+
+
+.hero-description {
+
+    margin-top: 40px;
+
+    max-width: 500px;
+
+    font-size: 19px;
+
+    line-height: 1.7;
+
+    color: #ad9da1;
+
+}
+
+
+.scroll-button {
+
+    margin-top: 45px;
+
+    padding: 0;
+
+    border: none;
+
+    background: none;
+
+    color: white;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+    font-size: 15px;
+
+}
+
+
+.scroll-button b {
+
+    width: 50px;
+    height: 50px;
+
+    border-radius: 50%;
+
+    border:
+        1px solid rgba(255,255,255,0.2);
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 20px;
+
+    transition: 0.3s;
+
+}
+
+
+.scroll-button:hover b {
+
+    background: #d72e51;
+
+    border-color: #d72e51;
+
+    transform: translateY(5px);
+
+}
+
+
+/* =========================================
+   HERO DECORATION
+========================================= */
+
+.hero-decoration {
+
+    position: absolute;
+
+    right: 5vw;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 500px;
+    height: 500px;
+
+    pointer-events: none;
+
+}
+
+
+.circle {
+
+    position: absolute;
+
+    border-radius: 50%;
+
+    border:
+        1px solid rgba(215,46,81,0.15);
+
+}
+
+
+.circle-1 {
+
+    inset: 50px;
+
+    animation:
+        rotateCircle 20s linear infinite;
+
+}
+
+
+.circle-2 {
+
+    inset: 120px;
+
+    border-color:
+        rgba(255,255,255,0.08);
+
+    animation:
+        rotateCircle 15s linear infinite reverse;
+
+}
+
+
+.hero-heart {
+
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 130px;
+
+    color: #d72e51;
+
+    filter:
+        drop-shadow(
+            0 0 60px
+            rgba(215,46,81,0.5)
+        );
+
+    animation:
+        heartbeat 2s infinite;
+
+}
+
+
+@keyframes rotateCircle {
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+
+@keyframes heartbeat {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.08);
+    }
+
+}
+
+
+/* =========================================
+   SCROLL
+========================================= */
+
+.scroll-indicator {
+
+    position: absolute;
+
+    bottom: 35px;
+
+    left: 5vw;
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+    color: #66595e;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+}
+
+
+.scroll-indicator span {
+
+    display: block;
+
+    width: 50px;
+
+    height: 1px;
+
+    background: #66595e;
+
+}
+
+
+/* =========================================
+   GENERAL SECTIONS
+========================================= */
+
+.story-section,
+.photos-section,
+.quote-section,
+.counter-section,
+.confession,
+.question-section,
+.final-screen {
+
+    position: relative;
+
+    min-height: 100vh;
+
+    padding:
+        150px 8vw;
+
+}
+
+
+.section-number {
+
+    position: absolute;
+
+    left: 5vw;
+
+    top: 150px;
+
+    color: #4c4246;
+
+    font-size: 12px;
+
+    letter-spacing: 3px;
+
+}
+
+
+.story-content {
+
+    max-width: 900px;
+
+    margin: auto;
+
+}
+
+
+.story-content h2,
+.photos-header h2 {
+
+    margin-top: 30px;
+
+    font-size:
+        clamp(42px, 6vw, 80px);
+
+    line-height: 1;
+
+    letter-spacing: -3px;
+
+}
+
+
+.story-text {
+
+    margin-top: 70px;
+
+    max-width: 600px;
+
+}
+
+
+.story-text p {
+
+    margin-bottom: 30px;
+
+    font-size: 18px;
+
+    line-height: 1.9;
+
+    color: #a99a9f;
+
+}
+
+
+.story-text .accent {
+
+    color: #e3c8ce;
+
+    font-size: 23px;
+
+}
+
+
+/* =========================================
+   GALLERY
+========================================= */
+
+.photos-header {
+
+    max-width: 900px;
+
+    margin: auto;
+
+}
+
+
+.gallery {
+
+    max-width: 1100px;
+
+    margin: 80px auto 0;
+
+    display: grid;
+
+    grid-template-columns:
+        1.3fr
+        0.7fr;
+
+    grid-template-rows:
+        300px
+        300px;
+
+    gap: 20px;
+
+}
+
+
+.photo-card {
+
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        #151114;
+
+    border:
+        1px solid
+        rgba(255,255,255,0.06);
+
+}
+
+
+.photo-card img {
+
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.8s;
+
+}
+
+
+.photo-card:hover img {
+
+    transform: scale(1.06);
+
+}
+
+
+.photo-card.large {
+
+    grid-row:
+        span 2;
+
+}
+
+
+.photo-card.medium {
+
+    grid-column:
+        2;
+
+}
+
+
+.photo-placeholder {
+
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: #65595e;
+
+}
+
+
+.photo-placeholder span {
+
+    font-size: 40px;
+
+    color: #352d30;
+
+}
+
+
+.photo-placeholder p {
+
+    margin-top: 10px;
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+}
+
+
+/* =========================================
+   QUOTE
+========================================= */
+
+.quote-section {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+}
+
+
+.quote-mark {
+
+    font-size: 130px;
+
+    line-height: 0.5;
+
+    color: #d72e51;
+
+}
+
+
+blockquote {
+
+    max-width: 900px;
+
+    margin-top: 30px;
+
+    font-size:
+        clamp(35px, 5vw, 65px);
+
+    line-height: 1.1;
+
+    letter-spacing: -2px;
+
+}
+
+
+.quote-line {
+
+    width: 70px;
+
+    height: 1px;
+
+    background: #d72e51;
+
+    margin-top: 50px;
+
+}
+
+
+/* =========================================
+   FACTS
+========================================= */
+
+.second {
+
+    min-height: 90vh;
+
+}
+
+
+.facts {
+
+    max-width: 750px;
+
+    margin-top: 70px;
+
+}
+
+
+.fact {
+
+    display: grid;
+
+    grid-template-columns: 70px 1fr;
+
+    gap: 20px;
+
+    padding: 30px 0;
+
+    border-top:
+        1px solid
+        rgba(255,255,255,0.08);
+
+}
+
+
+.fact span {
+
+    color: #d72e51;
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+
+}
+
+
+.fact p {
+
+    font-size: 21px;
+
+    line-height: 1.5;
+
+    color: #b8a9ae;
+
+}
+
+
+/* =========================================
+   COUNTER
+========================================= */
+
+.counter-section {
+
+    text-align: center;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #1c080e,
+            #080708 60%
+        );
+
+}
+
+
+.counter-section h2 {
+
+    margin-top: 25px;
+
+    font-size:
+        clamp(40px, 6vw, 75px);
+
+    letter-spacing: -3px;
+
+}
+
+
+.counter {
+
+    margin-top: 70px;
+
+    display: flex;
+
+    gap: 70px;
+
+}
+
+
+.counter div {
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+.counter strong {
+
+    font-size:
+        clamp(40px, 6vw, 75px);
+
+    font-weight: 500;
+
+}
+
+
+.counter span {
+
+    margin-top: 10px;
+
+    color: #6e6267;
+
+    text-transform: uppercase;
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+}
+
+
+.counter-caption {
+
+    margin-top: 50px;
+
+    color: #776a6f;
+
+    font-size: 13px;
+
+}
+
+
+/* =========================================
+   CONFESSION
+========================================= */
+
+.confession {
+
+    min-height: 110vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+}
+
+
+.confession-inner {
+
+    max-width: 1000px;
+
+}
+
+
+.small-heart {
+
+    color: #d72e51;
+
+    font-size: 30px;
+
+    animation:
+        heartbeat 1.5s infinite;
+
+}
+
+
+.confession h2 {
+
+    margin-top: 30px;
+
+    font-size:
+        clamp(40px, 6vw, 75px);
+
+    line-height: 1;
+
+    letter-spacing: -3px;
+
+}
+
+
+.confession-text {
+
+    max-width: 550px;
+
+    margin: 45px auto 0;
+
+    font-size: 18px;
+
+    line-height: 1.8;
+
+    color: #9d8e93;
+
+}
+
+
+.big-confession {
+
+    margin-top: 90px;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 25px;
+
+    flex-wrap: wrap;
+
+}
+
+
+.big-confession span {
+
+    font-size:
+        clamp(60px, 10vw, 130px);
+
+    font-weight: 700;
+
+    letter-spacing: -7px;
+
+    color: #d72e51;
+
+}
+
+
+.big-confession span:nth-child(2) {
+
+    color: #f2dfe3;
+
+}
+
+
+.under-confession {
+
+    margin-top: 30px;
+
+    font-size: 30px;
+
+}
+
+
+/* =========================================
+   QUESTION
+========================================= */
+
+.question-section {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+}
+
+
+.question-inner {
+
+    width: 100%;
+
+}
+
+
+.question-section h2 {
+
+    margin-top: 35px;
+
+    font-size:
+        clamp(65px, 10vw, 140px);
+
+    line-height: 0.9;
+
+    letter-spacing: -7px;
+
+}
+
+
+.question-section h2 span {
+
+    color: #d72e51;
+
+}
+
+
+.answer-buttons {
+
+    position: relative;
+
+    min-height: 100px;
+
+    margin-top: 70px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 20px;
+
+}
+
+
+.answer-buttons button {
+
+    padding: 18px 35px;
+
+    border-radius: 50px;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+}
+
+
+.yes {
+
+    border: none;
+
+    background: #d72e51;
+
+    color: white;
+
+    box-shadow:
+        0 15px 40px
+        rgba(215,46,81,0.25);
+
+}
+
+
+.yes:hover {
+
+    transform: scale(1.08);
+
+    box-shadow:
+        0 20px 60px
+        rgba(215,46,81,0.4);
+
+}
+
+
+.maybe {
+
+    background: transparent;
+
+    color: #9d8e93;
+
+    border:
+        1px solid
+        rgba(255,255,255,0.15);
+
+}
+
+
+/* =========================================
+   FINAL
+========================================= */
+
+.final-screen {
+
+    display: none;
+
+    min-height: 100vh;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #450d1b,
+            #080708 65%
+        );
+
+}
+
+
+.final-screen.show {
+
+    display: flex;
+
+    animation:
+        finalAppear 1.2s ease;
+
+}
+
+
+@keyframes finalAppear {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            scale(0.95);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            scale(1);
+
+    }
+
+}
+
+
+.final-heart {
+
+    font-size: 130px;
+
+    color: #ff365d;
+
+    filter:
+        drop-shadow(
+            0 0 70px
+            rgba(255,54,93,0.6)
+        );
+
+    animation:
+        heartbeat 1.2s infinite;
+
+}
+
+
+.final-content h2 {
+
+    margin-top: 30px;
+
+    font-size:
+        clamp(45px, 7vw, 90px);
+
+    line-height: 1;
+
+    letter-spacing: -4px;
+
+}
+
+
+.final-content > p:last-of-type {
+
+    margin-top: 40px;
+
+    font-size: 35px;
+
+}
+
+
+.final-signature {
+
+    margin-top: 50px;
+
+    color: #817277;
+
+    font-size: 13px;
+
+}
+
+
+.final-signature strong {
+
+    display: block;
+
+    margin-top: 8px;
+
+    color: white;
+
+    font-size: 20px;
+
+}
+
+
+/* =========================================
+   CURSOR
+========================================= */
+
+.cursor {
+
+    position: fixed;
+
+    width: 8px;
+    height: 8px;
+
+    border-radius: 50%;
+
+    background: white;
+
+    pointer-events: none;
+
+    z-index: 999;
+
+    transform:
+        translate(-50%, -50%);
+
+}
+
+
+.cursor-glow {
+
+    position: fixed;
+
+    width: 35px;
+    height: 35px;
+
+    border-radius: 50%;
+
+    border:
+        1px solid
+        rgba(215,46,81,0.5);
+
+    pointer-events: none;
+
+    z-index: 998;
+
+    transform:
+        translate(-50%, -50%);
+
+    transition:
+        width 0.2s,
+        height 0.2s;
+
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 800px) {
+
+    .hero-decoration {
+
+        opacity: 0.25;
+
+        right: -150px;
+
+    }
+
+
+    .hero h1 {
+
+        letter-spacing: -3px;
+
+    }
+
+
+    .story-section,
+    .photos-section,
+    .quote-section,
+    .counter-section,
+    .confession,
+    .question-section,
+    .final-screen {
+
+        padding:
+            120px 25px;
+
+    }
+
+
+    .section-number {
+
+        display: none;
+
+    }
+
+
+    .gallery {
+
+        display: flex;
+
+        flex-direction: column;
+
+    }
+
+
+    .photo-card.large,
+    .photo-card.small,
+    .photo-card.medium {
+
+        height: 300px;
+
+    }
+
+
+    .counter {
+
+        gap: 20px;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+    }
+
+
+    .counter strong {
+
+        font-size: 40px;
+
+    }
+
+
+    .counter span {
+
+        font-size: 8px;
+
+    }
+
+
+    .big-confession {
+
+        gap: 10px;
+
+    }
+
+
+    .big-confession span {
+
+        letter-spacing: -4px;
+
+    }
+
+
+    .answer-buttons {
+
+        flex-direction: column;
+
+    }
+
+
+    .answer-buttons button {
+
+        width: 220px;
+
+    }
+
+
+    .cursor,
+    .cursor-glow {
+
+        display: none;
+
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .hero h1 {
+
+        font-size: 50px;
+
+    }
+
+
+    .hero-description {
+
+        font-size: 16px;
+
+    }
+
+
+    .story-content h2,
+    .photos-header h2 {
+
+        font-size: 42px;
+
+    }
+
+
+    blockquote {
+
+        font-size: 34px;
+
+    }
+
+
+    .counter {
+
+        gap: 25px;
+
+    }
+
+
+    .counter div {
+
+        width: 70px;
+
+    }
+
+
+    .question-section h2 {
+
+        font-size: 65px;
+
+    }
+
+}
