@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Небольшая история о двух людях."
+    >
+
+    <title>Бұл саған ❤️</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+    <!-- Курсор -->
+    <div class="cursor"></div>
+    <div class="cursor-glow"></div>
+
+
+    <!-- Фоновый шум -->
+    <div class="noise"></div>
+
+
+    <!-- Звёзды -->
+    <div class="stars"></div>
+
+
+    <!-- Верхняя панель -->
+
+    <header class="topbar">
+
+        <div class="logo">
+            B <span>×</span> ?
+        </div>
+
+        <div class="music-control">
+
+            <button
+                id="musicButton"
+                onclick="toggleMusic()"
+            >
+                <span id="musicIcon">♪</span>
+            </button>
+
+        </div>
+
+    </header>
+
+
+
+    <main>
+
+
+        <!-- =========================
+             HERO
+        ========================== -->
+
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <div class="eyebrow">
+                    A LITTLE STORY
+                </div>
+
+                <h1>
+
+                    Бұл жолдама
+                    <br>
+
+                    <span>
+                        Тек саған арналады.
+                    </span>
+
+                </h1>
+
+                <p class="hero-description">
+
+                    Кейде көп сөздер 
+                    айтылмай іште қалып қояды.
+
+                </p>
+
+
+                <button
+                    class="scroll-button"
+                    onclick="scrollToStory()"
+                >
+
+                    <span>
+                        Әрі қарай оқу
+                    </span>
+
+                    <b>↓</b>
+
+                </button>
+
+            </div>
+
+
+            <div class="hero-decoration">
+
+                <div class="circle circle-1"></div>
+                <div class="circle circle-2"></div>
+
+                <div class="hero-heart">
+                    ♥
+                </div>
+
+            </div>
+
+
+            <div class="scroll-indicator">
+
+                SCROLL
+
+                <span></span>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             INTRO
+        ========================== -->
+
+        <section
+            class="story-section"
+            id="story"
+        >
+
+            <div class="section-number">
+                01
+            </div>
+
+
+            <div class="story-content">
+
+                <p class="label">
+                    Басынан болсын
+                </p>
+
+                <h2>
+                    Есімде жоқ,
+                    <br>
+                    бұл қалай басталғаны.
+                </h2>
+
+                <div class="story-text">
+
+                    <p>
+                        Мүмкін, бәрі болманшы 
+                        нәрседен басталды. Кәдімгі әңгіме.
+                        Кәдімгі ашық сөздер.
+                    </p>
+
+                    <p>
+                        Бірақ бір сәтте бәрі өзгерді. 
+                        Бір кезде мен байқадым, сенің жылы
+                        сөздерің және күлкің мені өзіне тартады
+                        сені қайта қайта көргім келеді.
+                    </p>
+
+                    <p class="accent">
+                        сен мен үшін ерекше адамсың, 
+                        мен сені күнде ойлаймын.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- =========================
+             QUOTE
+        ========================== -->
+
+        <section class="quote-section">
+
+            <div class="quote-mark">
+                “
+            </div>
+
+            <blockquote>
+
+                Бір кезде адам өміріңде пайда болады да 
+            , Сол адам өміріңнің маңызды бөлігі болып кетеді.
+
+            </blockquote>
+
+            <div class="quote-line"></div>
+
+        </section>
+
+
+
+        <!-- =========================
+             SECOND STORY
+        ========================== -->
+
+        <section class="story-section second">
+
+            <div class="section-number">
+                03
+            </div>
+
+
+            <div class="story-content">
+
+                <p class="label">
+                    Ал одан кейін
+                </p>
+
+                <h2>
+                    Мен майда шүйде нәрселер байқай бастадым.
+                </h2>
+
+
+                <div class="facts">
+
+                    <div class="fact">
+
+                        <span>01</span>
+
+                        <p>
+                            Маған қызық болып бастады,
+                            сенің күнің қалай өтті.
+                        </p>
+
+                    </div>
+
+
+                    <div class="fact">
+
+                        <span>02</span>
+
+                        <p>
+                            Мен күтетін болдым 
+                            екеуміздің әңгімелерімізді.
+                        </p>
+
+                    </div>
+
+
+                    <div class="fact">
+
+                        <span>03</span>
+
+                        <p>
+                            Сенің күлкің жымиғаның бәрі
+                            ұнап бастады.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             COUNTER
+        ========================== -->
+
+        <section class="counter-section">
+
+            <p class="label">
+                сен бұна оқып отқанда...
+            </p>
+
+            <h2>
+                Уақыт тоқтап атқан жоқ.
+            </h2>
+
+
+            <div class="counter">
+
+                <div>
+                    <strong id="days">
+                        000
+                    </strong>
+
+                    <span>
+                        күн
+                    </span>
+                </div>
+
+
+                <div>
+                    <strong id="hours">
+                        00
+                    </strong>
+
+                    <span>
+                        сағат
+                    </span>
+                </div>
+
+
+                <div>
+                    <strong id="minutes">
+                        00
+                    </strong>
+
+                    <span>
+                        минут
+                    </span>
+                </div>
+
+
+                <div>
+                    <strong id="seconds">
+                        00
+                    </strong>
+
+                    <span>
+                        секунд
+                    </span>
+                </div>
+
+            </div>
+
+
+            <p class="counter-caption">
+                осы сәттен бастап.
+            </p>
+
+        </section>
+
+
+
+        <!-- =========================
+             CONFESSION
+        ========================== -->
+
+        <section class="confession">
+
+            <div class="confession-inner">
+
+                <div class="small-heart">
+                    ♥
+                </div>
+
+                <p class="label">
+                    маңыздысы на да жеттік
+                </p>
+
+
+                <h2>
+
+                    Жазсам болар еді
+                    <br>
+
+                    бұл жерде мыңдаған сөз.
+
+                </h2>
+
+
+                <p class="confession-text">
+
+                    Бәрін түсіндіріп,
+                    неге сен маған ұнайсың.
+                    мен айта берсем болады,
+                    бұған дейін қанша рет
+                    айтқым келді.
+
+                </p>
+
+
+                <p class="confession-text">
+
+                    Бірақ, Мүмкін,
+                    шындықты айтқан дұрыс шығар.
+
+                </p>
+
+
+                <div class="big-confession">
+
+                    <span>
+                        мен
+                    </span>
+
+                    <span>
+                        сені
+                    </span>
+
+                    <span>
+                        сүйем.
+                    </span>
+
+                </div>
+
+
+                <p class="under-confession">
+                    ❤️
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             FINAL QUESTION
+        ========================== -->
+
+        <section class="question-section">
+
+            <div class="question-inner">
+
+                <p class="label">
+                    енді бір нәрсе қалды.
+                </p>
+
+
+                <h2>
+                    сен менімен 
+                    <br>
+
+                    <span>
+                        бірге боласың ба?
+                    </span>
+                </h2>
+
+
+                <div class="answer-buttons">
+
+                    <button
+                        class="yes"
+                        onclick="sayYes()"
+                    >
+                        Ия, боламын ❤️
+                    </button>
+
+
+                    <button
+                        class="maybe"
+                        id="maybeButton"
+                        onclick="runAway()"
+                    >
+                        Ойланып көрейін...
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             FINAL ANSWER
+        ========================== -->
+
+        <section
+            class="final-screen"
+            id="finalScreen"
+        >
+
+            <div class="final-content">
+
+                <div class="final-heart">
+                    ♥
+                </div>
+
+
+                <p class="label">
+                    Ең жақсыбек жауап
+                </p>
+
+
+                <h2>
+                    Онда...
+                    <br>
+                    өз тарихымызды бастайық.
+                </h2>
+
+
+                <p>
+                    ❤️
+                </p>
+
+
+                <div class="final-signature">
+
+                    махаббатпен,
+
+                    <strong>
+                        Бекболат
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =========================
+         AUDIO
+    ========================== -->
+
+    <audio
+        id="music"
+        loop
+    >
+
+        <source
+            src="music.mp3"
+            type="audio/mpeg"
+        >
+
+    </audio>
+
+
+    <!-- JavaScript -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
